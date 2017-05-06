@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clase04;
+package clase04_EjZoologico_UsoStatic;
 
 import java.util.Date;
-import clase04.Cuidador;
+import clase04_EjZoologico_UsoStatic.Cuidador;
 
 /**
  *
