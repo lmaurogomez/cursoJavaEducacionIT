@@ -13,8 +13,8 @@ import clase04.Cuidador;
  * @author educacionit
  */
 public class Zoologico {
-    public final int CANTIDAD_ANIMALES = 25;
-    public final int RACIONES_POR_ANIMALES = 5;
+    public static final int CANTIDAD_ANIMALES = 25;                //es un parametro que puedo acceder 
+    public static final int RACIONES_POR_ANIMALES = 5;             //sin hacer un new Zoologico
     private boolean estadoZoo = false;        //true abierto,false cerrado
     
     public void abrirZoo(){
@@ -27,7 +27,7 @@ public class Zoologico {
     }
     public void alimentarAnimales(int cantRaciones){
         Cuidador c = new Cuidador("pepe",new Date (2017,5,5),cantRaciones);
-        c.alimentarAnimales(this);
+        c.alimentarAnimales();
     }
 }
   

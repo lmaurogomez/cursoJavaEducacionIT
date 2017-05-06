@@ -17,7 +17,7 @@ public class Programa {
     public static void main(String[] args) {
         Zoologico zoo = new Zoologico();
         zoo.abrirZoo();
-        zoo.alimentarAnimales(500);
+        zoo.alimentarAnimales(251);
         zoo.cerrarZoo();
     }
     

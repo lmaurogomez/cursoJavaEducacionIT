@@ -18,10 +18,11 @@ public class Cuidador extends Persona{
         super(nombre, fechaNacimiento);
         this.cantRaciones = cantRaciones;
     }
-    
-    public void alimentarAnimales(Zoologico z){
-        System.out.println("El Zoo cuenta con " + z.CANTIDAD_ANIMALES + " animales y debemos darle a cada uno " + z.RACIONES_POR_ANIMALES + " raciones ");
-        if(this.cantRaciones >= z.CANTIDAD_ANIMALES * z.RACIONES_POR_ANIMALES)
+                                            // Aca me sirve lo del static, no necesito pasarle
+    public void alimentarAnimales(){        // al metodo una clase Zoologico para acceder a los datos.
+        System.out.println("El Zoo cuenta con " + Zoologico.CANTIDAD_ANIMALES + " animales y debemos darle a cada uno " + Zoologico.RACIONES_POR_ANIMALES + " raciones ");
+        System.out.println("La ración mínima debe ser de " +  Zoologico.CANTIDAD_ANIMALES * Zoologico.RACIONES_POR_ANIMALES);
+        if(this.cantRaciones >= Zoologico.CANTIDAD_ANIMALES * Zoologico.RACIONES_POR_ANIMALES)
             System.out.println("Las raciones alcanzan");
         else
             System.out.println("Las raciones NO alcanzan");
