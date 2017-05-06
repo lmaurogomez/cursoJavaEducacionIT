@@ -1,5 +1,5 @@
 
-package proyectoclase;
+package clase03_Clases_Constructor_Herencia_Abstract;
 
 public class ProyectoClase {
 
