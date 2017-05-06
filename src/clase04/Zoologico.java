@@ -5,17 +5,29 @@
  */
 package clase04;
 
+import java.util.Date;
+import clase04.Cuidador;
+
 /**
  *
  * @author educacionit
  */
 public class Zoologico {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+    public final int CANTIDAD_ANIMALES = 25;
+    public final int RACIONES_POR_ANIMALES = 5;
+    private boolean estadoZoo = false;        //true abierto,false cerrado
     
+    public void abrirZoo(){
+        estadoZoo = true;
+        System.out.println("El Zoo acaba de abrir");
+    }
+    public void cerrarZoo(){
+        estadoZoo = false;
+        System.out.println("El Zoo acaba de cerrar");
+    }
+    public void alimentarAnimales(int cantRaciones){
+        Cuidador c = new Cuidador("pepe",new Date (2017,5,5),cantRaciones);
+        c.alimentarAnimales(this);
+    }
 }
+  
