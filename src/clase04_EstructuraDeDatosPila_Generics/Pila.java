@@ -1,5 +1,5 @@
 
-package clase04_EstructuraDeDatosPila;
+package clase04_EstructuraDeDatosPila_Generics;
 
 public class Pila {
     private final int max;
@@ -41,4 +41,27 @@ public class Pila {
             System.out.println(elementos[tope--]);
         }
     }
+    
+    /*                        Genericos        
+            //sirve para implementar objetos en diferentes 
+            //tipos de datos a futuro, hoy puede ser int y mañana String si quiero
+    
+    public class Pila < T >{
+        private final int max;
+        private T []elementos;
+        private int tope = -1;
+    
+        public void empujar (T e){
+        }
+        
+        public T sacar(){
+        }
+    
+    }
+    
+    Clase programa, inicializacion
+    
+    Pila<String> p = new Pila <>();
+    
+    */
 }

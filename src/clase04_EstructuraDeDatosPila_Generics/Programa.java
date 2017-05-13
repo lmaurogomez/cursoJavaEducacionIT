@@ -1,4 +1,4 @@
-package clase04_EstructuraDeDatosPila;
+package clase04_EstructuraDeDatosPila_Generics;
 
 //push para meter,pop para sacar,
 //isempty para ver si esta vacia
