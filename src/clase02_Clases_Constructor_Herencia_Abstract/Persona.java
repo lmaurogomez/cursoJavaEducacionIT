@@ -1,5 +1,5 @@
 
-package clase03_Clases_Constructor_Herencia_Abstract;
+package clase02_Clases_Constructor_Herencia_Abstract;
 
 import java.util.Objects;
                                            //Abstract, clase que no puedo instanciar, es el mas generico
