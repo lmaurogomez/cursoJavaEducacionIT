@@ -1,15 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package clase04_EstructuraDeDatosPila;
 
-
-/**
- *
- * @author educacionit
- */
 public class Pila {
     private final int max;
     private Object[] elementos;
@@ -45,7 +36,6 @@ public class Pila {
         return tope == -1;
     }
    
-    
     public void recorrerPila(){   
         while(!this.isEmpty()){
             System.out.println(elementos[tope--]);
