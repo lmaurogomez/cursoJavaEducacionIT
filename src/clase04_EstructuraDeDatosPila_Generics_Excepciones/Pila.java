@@ -1,5 +1,5 @@
 
-package clase04_EstructuraDeDatosPila_Generics;
+package clase04_EstructuraDeDatosPila_Generics_Excepciones;
 
 public class Pila {
     private final int max;
@@ -11,9 +11,9 @@ public class Pila {
         elementos = new Object [max];
     }
     
-    public void push(Object elemento){
+    public void push(Object elemento) throws PilaLlenaException{
         if (tope == max-1){
-            System.out.println("La pila esta llena");
+            throw new PilaLlenaException();
         }
         else{
             tope++;
@@ -21,15 +21,14 @@ public class Pila {
         }   
     }
     
-    public Object pop(){
+    public Object pop() throws PilaVaciaException{
         if(tope != -1){
             Object e = elementos[tope];
             elementos[tope--]=null;
             return e;                                    //--tope  se decrementa primero
         }                                                //tope-- se decrementa luego
         else
-            System.out.println("Pila vacia");
-            return null;
+            throw new PilaVaciaException();
     }
     
     public boolean isEmpty(){
@@ -63,5 +62,9 @@ public class Pila {
     
     Pila<String> p = new Pila <>();
     
+    ---------------------------------------------------------------------------------
+    ---------------------------------------------------------------------------------
+    ---------------------------------------------------------------------------------
+   
     */
 }
