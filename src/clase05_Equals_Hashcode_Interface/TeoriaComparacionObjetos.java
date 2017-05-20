@@ -31,9 +31,10 @@ Es una declaración de comportamiento, es decir un conjunto de métodos sin su i
 Define un protocolo de comportamiento. Es un contrato que publica una clase para ser utilizada 
 por otras clases. Puede heredar de otras interfaces.
 Los metodos estaran implementados en las sub clases.
-                                        PilaAbstracta
-                                         /         \
-                                     Pila         PilaEnlazada
+
+                                            PilaAbstracta
+                                             /         \
+                                         Pila         PilaEnlazada
 
 public interface PilaAbstracta{      <- Interfaz
     void push(T e);
