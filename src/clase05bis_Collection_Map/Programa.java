@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 public class Programa {
     public static void main(String[] args) {
@@ -36,6 +38,16 @@ public class Programa {
             System.out.println("DNI: " + p.getEdad());
             System.out.println("Edad: " + p.getDni());
             System.out.println("------------------------------");
+        }
+        
+        SortedSet<String> ordenados = new TreeSet<>();
+        ordenados.add("b");
+        ordenados.add("z");
+        ordenados.add("a");
+        ordenados.add("c");
+        
+        for(String l: ordenados){
+            System.out.println(l);
         }
         
           
