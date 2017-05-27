@@ -4,7 +4,7 @@
  *
  */
 
-package clase06LabAccesoBaseDatos;
+package clase06_AccesoBaseDatos;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
