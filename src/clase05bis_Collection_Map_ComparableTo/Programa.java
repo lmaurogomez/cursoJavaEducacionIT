@@ -84,7 +84,7 @@ public class Programa {
         personasMapPorDNI.put("38787251",new Persona("Ruperto", "Arribas", 38787251, 23));
         Persona p1 = personasMapPorDNI.get("30787251");   //Se debe implementar el toString si o si para visualizar
         System.out.println(p1);
-        //Como recorrer un mapa
+        //Como recorrer un mapa de tres formas
         //para obtener los values
         System.out.println("-----------Values-------------------");
         for(Persona p: personasMapPorDNI.values()){
@@ -95,6 +95,12 @@ public class Programa {
         for(String k: personasMapPorDNI.keySet()){
             System.out.println(k + ":" + personasMapPorDNI.get(k));
         }
+        //entrySet
+        System.out.println("--------------entrySet----------------");
+        for(Map.Entry<String,Persona> e: personasMapPorDNI.entrySet()){
+            System.out.println(e.getKey() + ":" + e.getValue());
+        }
+        
 
 
     }
