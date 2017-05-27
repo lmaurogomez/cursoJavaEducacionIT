@@ -22,13 +22,6 @@ Por ejemplo, una agenda es una colección de datos de personas.
 -Una Lista es una colección ordenada que puede contener valores duplicados.
 Puede contener elementos Nulos. Soporta manipulación de elementos via índices a través del metodo:
 Object get(int indice), que permite obtener el elemento en la posición indice de la lista.
-
-                                          Map
-
-La interfaz Map provee tuplas del tipo Key-value, los objetos Map contienen claves o 
-Keys asociadas con valores o values. Los Maps no pueden contener claves duplicadas y 
-una clave puede ser asociada como máximo a un elemento.
-Se utiliza: put(clave,valor) y get(clave).
     
                                          CompareTo
 Sirve para compara los TreeSet de alguna forma en particular, se tiene que implementar a mano dentro de
@@ -42,4 +35,12 @@ public int compareTo (Persona otra){
 compareTo compara Strings pero si necesitamos comparar por int, debemos colocar el tipo de atributo como
 Integer. Hay que agregar en el nombre de la clase el implements comparable <Clase>
 
+                                          Map
+
+La interfaz Map provee tuplas del tipo Key-value, los objetos Map contienen claves o 
+Keys asociadas con valores o values. Los Maps no pueden contener claves duplicadas y 
+una clave puede ser asociada como máximo a un elemento.
+Se utiliza: put(clave,valor) y get(clave).
+EJ:
+Map <String, Persona> personas = new HashMap<>();
 */

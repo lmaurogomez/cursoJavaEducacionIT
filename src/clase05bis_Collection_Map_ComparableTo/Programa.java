@@ -6,8 +6,10 @@
 package clase05bis_Collection_Map_ComparableTo;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
@@ -15,6 +17,8 @@ import java.util.TreeSet;
 public class Programa {
 
     public static void main(String[] args) {
+        System.out.println("-------------------------------------------------------------------------");
+        System.out.println("----------------------------Array----------------------------------------");
         //Array
         List<String> nombres = new ArrayList<>();   //podria ser tambien new LinkedList<>();
         nombres.add("Juan");
@@ -28,7 +32,7 @@ public class Programa {
             System.out.println(e);
         }
         System.out.println("-------------------------------------------------------------------------");
-        System.out.println("-------------------------------------------------------------------------");
+        System.out.println("----------------------------TreeSetV1------------------------------------");
         
         //Set
         Set<Persona> personas = new HashSet<>();
@@ -55,7 +59,7 @@ public class Programa {
             System.out.println(l);
         }
         System.out.println("-------------------------------------------------------------------------");
-        System.out.println("-------------------------------------------------------------------------");
+        System.out.println("-------------------------------TreeSetV2---------------------------------");
         
         //SortedSet TreeSetV2
         SortedSet<Persona> personasV2 = new TreeSet <Persona>();
@@ -71,6 +75,27 @@ public class Programa {
             System.out.println("Edad: " + p.getDni());
             System.out.println("------------------------------");
         }
+        System.out.println("-------------------------------------------------------------------------");
+        System.out.println("---------------------------------Mapa------------------------------------");
+        //Mapa
+        Map <String, Persona> personasMapPorDNI = new HashMap<>();  //pongo edad xq me confundi al poner DNI
+        personasMapPorDNI.put("30207581",new Persona("Juan", "Perez", 30207581, 15));
+        personasMapPorDNI.put("30787251",new Persona("Lucas", "Mauro", 30787251, 20));
+        personasMapPorDNI.put("38787251",new Persona("Ruperto", "Arribas", 38787251, 23));
+        Persona p1 = personasMapPorDNI.get("30787251");   //Se debe implementar el toString si o si para visualizar
+        System.out.println(p1);
+        //Como recorrer un mapa
+        //para obtener los values
+        System.out.println("-----------Values-------------------");
+        for(Persona p: personasMapPorDNI.values()){
+            System.out.println(p);
+        }
+        //para obtener las keys
+        System.out.println("--------------Keys----------------");
+        for(String k: personasMapPorDNI.keySet()){
+            System.out.println(k + ":" + personasMapPorDNI.get(k));
+        }
+
 
     }
 }
