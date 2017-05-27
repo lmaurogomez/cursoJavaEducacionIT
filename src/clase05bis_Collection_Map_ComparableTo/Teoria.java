@@ -1,5 +1,5 @@
 
-package clase05bis_Collection_Map;
+package clase05bis_Collection_Map_ComparableTo;
 
 public class Teoria {
     
@@ -29,5 +29,17 @@ La interfaz Map provee tuplas del tipo Key-value, los objetos Map contienen clav
 Keys asociadas con valores o values. Los Maps no pueden contener claves duplicadas y 
 una clave puede ser asociada como máximo a un elemento.
 Se utiliza: put(clave,valor) y get(clave).
+    
+                                         CompareTo
+Sirve para compara los TreeSet de alguna forma en particular, se tiene que implementar a mano dentro de
+la clase.
+
+EJ 
+public int compareTo (Persona otra){
+        return this.dni.compareTo (otra.dni);
+    }
+
+compareTo compara Strings pero si necesitamos comparar por int, debemos colocar el tipo de atributo como
+Integer. Hay que agregar en el nombre de la clase el implements comparable <Clase>
 
 */

@@ -1,16 +1,16 @@
 
-package clase05bis_Collection_Map;
+package clase05bis_Collection_Map_ComparableTo;
 
 import java.util.Objects;
                                            
-public class Persona {            
+public class Persona implements Comparable<Persona>{            
     
     private String nombre;                 
     private String apellido;                
-    private int dni;                       
+    private Integer dni;                       
     private int edad;                      
     
-    Persona(String nombre,String apellido, int dni, int edad){
+    Persona(String nombre,String apellido, Integer dni, int edad){
         this.nombre=nombre;                                    
         this.apellido=apellido;                                
         this.dni=dni;                                         
@@ -86,5 +86,9 @@ public class Persona {
 
     public int getEdad() {
         return edad;
+    }
+    //CompareTO
+    public int compareTo (Persona otra){
+        return this.dni.compareTo (otra.dni);
     }
 }
