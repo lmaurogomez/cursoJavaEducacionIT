@@ -23,6 +23,21 @@ Se agrega el driver JDBC de cada base de datos (relaciona,no relacional, etc)
 
 Indice, lo que me permite buscar buscar dentro de la tabla. Se asocia con la Primary Key
 
+-Transacciones
+-Commit
+-RollBack
+-DAO
+
+                                            Try{
+                                                Insert
+                                                Commit
+                                            }Catch(Exception e){
+                                                RollBack
+                                            }
+
+Se utiliza un Data Source para conectarme a la base de datos.
+
+
                                             Comandos SQL:
 
 SELECT * FROM employees;
@@ -51,7 +66,44 @@ DELETE FROM employees WHERE emp_no > 1;
 
 UPDATE employees SET birth_date = '1950-01-01', first_name= 'Hugo', last_name = 'Chavez', gender = 'M',hire_date = '1970-4-5' WHERE emp_no = -90001;
 
+SELECT COUNT(*) FROM employees;  Es mejor costumbre colocar un campo para no traer todos los datos.EJ: SELECT COUNT(nombre) FROM employee
 
+SELECT MAX(salary) from salaries;
 
+SELECT Min(salary) from salaries;
 
+SELECT SUM(salary) from salaries;
+
+Select AVG(salary) from salaries;    sacar promedio
+
+Select LENGTH(first_name) from employees;   caracteres del campo
+
+SELECT LOWER (first_name) from employees;   pasar a minuscula
+
+SELECT UPPER (first_name) from employees;   pasar a mayuscula
+
+SELECT UPPER (first_name) AS name,      AS asigna alias SOLAMENTE para la visualizacion
+		now() AS _date
+From employees;
+
+SELECT * FROM employees LIMIT 1;          Te muestra el primer registro o el limite q le pongas
+
+SELECT * FROM employees                   para que me arroje el ultimo
+ORDER by first_name desc
+LIMIT 1;
+
+SELECT COUNT(DISTINCT last_name) FROM employees;           DISTINCT toma a todos los repetidos como 1
+
+Select * From salaries
+Where salary Between 70000 AND 90000
+
+Select e.*, t.* FROM employees e                   no se coloca el AS dado que es una tabla, no un campo.
+INNER JOIN titles t ON e.emp_no = t.emp_no;        e.* te trae todos los datos de esa tabla
+                                                    INNER JOIN une las tablas por el campo que se indique.
+
+Select e.*, s.* FROM employees e 
+INNER JOIN salaries s ON e.emp_no = s.emp_no;
+
+Select e.*, s.* FROM employees e 
+LEFT JOIN salaries s ON e.emp_no = s.emp_no;
 */
