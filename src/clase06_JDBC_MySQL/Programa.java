@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Programa {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args){
             try{
                 List<Empleados> empleado = new ArrayList<>();
                         //Conexion
